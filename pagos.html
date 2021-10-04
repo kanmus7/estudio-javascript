@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de pagos</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de pagos</h1>
+    </header>
+    <section>
+        <div>
+            <label for="asistentesId">Escribe el nombre de la persona que va a pedir: </label>
+            <input type="text" id="asistentesId">   <br><br>        
+            <label for="pedidoId">Escoge el pedido:</label>
+            <select name="pedidoId" id="pedidoId" >
+                <option value=""></option>
+                <option value="hamburguesa">Hamburguesa</option>
+                <option value="papas">Papas</option>
+                <option value="perroCaliente">Perro Caliente</option>
+                <option value="malteada">Malteada</option>  
+            </select><br><br>
+            <label for="pagoId">Digita la cantidad con la que va a pagar: </label> 
+            <input type="number" id="pagoId"> <br> <br>
+        </div>
+        <div>
+            <button type="button" onclick="recibirDatos()">Agregar datos persona</button><br><br>
+            <button type="button" onclick="calcularPago()">Calcular Pago</button>
+        </div>
+        <div hidden id="totalPagarId" >        
+        <h2>Total recogido:</h2>
+        <input type="number" placeholder="total dinero recogido" readonly id="totalRecogido"> <br>
+        <h2>Total a pagar:</h2>
+        <input type="number" placeholder="total a pagar" readonly id="totalPago"> <br>
+        <h2>Devuelta:</h2>
+        <input type="number" placeholder="Devuelta total" readonly id="totalDevuelta"> <br>
+        <ul id="lista">
+          </ul>  
+    </div>        
+    </section>
+    <script src="./pagos.js"></script>
+</body>
+</html>

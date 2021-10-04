@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geométricas</title>
+</head>
+<body>
+    <header class="titulo">
+        <h1> Figuras geométricas</h1>
+        <p>Este es el primer curso practico de JavaScript</p>
+    </header>
+    <section class="figurasGeometricas">
+        <div class="seleccionFigura">
+            <label for="figuras">Escoge una figura:</label>
+            <select name="figuras" id="figuras" onclick="seleccionFigura()">
+                <option value="cuadrado">Cuadrado</option>
+                <option value="triangulo">Triangulo</option>
+                <option value="trianguloIs">Triangulo Isoceles</option>
+                <option value="circulo">Circulo</option>  
+            </select>
+        </div>
+        <div  class="cuadrado" id="figuraCuadrado">
+            <h2>Cuadrado</h2>
+            <div class="cuadrado__formulario">
+                <label for="inputCuadrado" class="cuadrado__formulario--titulo">Escribe cuanto mide cada lado de tu cuadrado: </label>
+                <input id="inputCuadrado" type="number" class="cuadrado__formulario--lados" >
+                <button class="cuadrado__formulario--botonPerimetro" type="button" onclick="calcularPerimetroCuadrado()">Calcular perimetro</button>
+                <button class="cuadrado__formulario--botonArea" type="button" onclick="calcularAreaCuadrado()">Calcular area</button>
+            </div>
+        </div>
+        <div hidden class="triangulo" id="figuraTriangulo">
+            <h2>Triangulo</h2>
+            <div class="triangulo__formulario">
+                <label for="inputTriangulo" class="triangulo__formulario--titulo">Escribe cuanto mide cada lado de tu triangulo: </label>
+                <input id="inputTriangulo" type="number" class="triangulo__formulario--lados" > <br>
+                <label for="inputAlturaTriangulo" class="triangulo__titulo--altura">Escribe cuanto mide la altura del triangulo: </label>
+                <input id="inputAlturaTriangulo" type="number" class="triangulo__formulario--altura" >
+                <button class="triangulo__formulario--botonPerimetro" type="button" onclick="calcularPerimetroTriangulo()">Calcular perimetro</button>
+                <button class="triangulo__formulario--botonArea" type="button" onclick="calcularAreaTriangulo()">Calcular area</button>
+            </div>
+        </div>
+        <div hidden class="circulo" id="figuraCirculo">
+            <h2>Circulo</h2>
+            <div class="circulo__formulario">
+                <label for="inputCirculo" class="circulo__formulario--titulo">Escribe cuanto mide el radio del circulo: </label>
+                <input id="inputCirculo" type="number" class="circulo__formulario--radio" >
+                <button class="circulo__formulario--botonPerimetro" type="button" onclick="calcularPerimetroCirculo()">Calcular perimetro</button>
+                <button class="circulo__formulario--botonArea" type="button" onclick="calcularAreaCirculo()">Calcular area</button>
+            </div>
+        </div>
+        <div hidden class="trianguloI" id="figuraTrianguloI">
+            <h2>Triangulo Isoceles</h2>
+            <div class="trianguloI__formulario">
+                <label for="inputTriangulo1" class="trianguloI__formulario--lado1">Escribe el lado 1 del triangulo isoceles: </label>
+                <input id="inputTriangulo1" type="number" class="trianguloI__formulario--lado1" > <br>
+                <label for="inputTriangulo2" class="triangulo--lado2">Escribe el lado 2 del triangulo isoceles: </label>
+                <input id="inputTriangulo2" type="number" class="trianguloI__formulario--lado2" > <br>
+                <label for="inputTriangulo3" class="triangulo--lado3">Escribe el lado 3 del triangulo isoceles: </label>
+                <input id="inputTriangulo3" type="number" class="trianguloI__formulario--lado3" > 
+                <button class="trianguloI__formulario--botonArea" type="button" onclick="alturaTrianguloIsoceles()">Calcular altura</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./figuras.js"></script>    
+</body>
+</html>
